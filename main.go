@@ -12,5 +12,8 @@ func main() {
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, user!)")
 	})
+	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "PONG!!!")
+	})
 	http.ListenAndServe(":8098", nil)
 }
